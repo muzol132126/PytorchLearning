@@ -1,6 +1,3 @@
-from msilib.schema import Class
-from numpy import outer
-import torch
 import torchvision
 from torch import nn
 from torch.nn import Conv2d
@@ -22,7 +19,7 @@ class MyModule(nn.Module):
 
 myModule = MyModule()
 
-writer = SummaryWriter("../logs")
+writer = SummaryWriter("logs")
 
 step = 0
 for data in dataloader:
@@ -31,8 +28,10 @@ for data in dataloader:
     # print(help(torch.shape))
     writer.add_images("input", imgs, step)
 
-    output = torch.reshape(output, (-1, 3, 30, 30))
-    writer.add_images("output", output, step)
+    # output = torch.reshape(output, (-1, 3, 30, 30))
+    # writer.add_images("output", output, step)
     step+=1
+
+writer.close()
 
 
