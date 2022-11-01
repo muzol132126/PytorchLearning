@@ -4,3 +4,7 @@
 #### 2. Torchvision中Transforms的使用
 #### 3. torch.utils.data中DataLoader的使用
 #### 4. nn模型的构建
+
+#### 5. 对CIFAR10数据集进行分类
+
+#### 6. 对MNIST数据集进行分类
